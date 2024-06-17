@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repositories.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Repositories.Interface
         public Task DeleteAsync(int id);
         public Task UpdateAsync(int id, T entity);
         public Task Post(T item);
-        public Task AddItemAsync(T item);
+        public Task<AuditLogs> AddItemAsync(T item);
         
 
     }

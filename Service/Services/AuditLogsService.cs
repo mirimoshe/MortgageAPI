@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Service.Services
 {
-    public class AuditLogs : IService<AuditLogsDto>
+    public class AuditLogsService : IService<AuditLogsDto>
     {
         private readonly IMapper _mapper;
         private readonly IRepository<AuditLogsDto> _repository;
 
-        public AuditLogs (IRepository<AuditLogsDto> repository, IMapper mapper)
+        public AuditLogsService (IRepository<AuditLogsDto> repository, IMapper mapper)
         {
             _mapper = mapper;
             _repository = repository;
